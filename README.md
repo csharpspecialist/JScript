@@ -1,2 +1,2 @@
-# Progs
-Files for practice usuage
+# JScript
+Javasript files for practice usuage
