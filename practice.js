@@ -12,12 +12,23 @@ function getDiceAmount() {
 	document.getElementById("bet").innerHTML = wagerInput;
 };
 
+
+
 function timer()
 {
   document.getElementById('demo').innerHTML = Date();
 };
 
+var i = 0;
+function smoke() {
+  for (i = 0; i < 10; i++) {
+  //  document.write(i);
 
+    document.getElementById("dude").innerHTML= "You rolled a " + (i);
+  };
+};
+
+smoke();
 
 function roll() {
   // get the current bet from the value property of the input
