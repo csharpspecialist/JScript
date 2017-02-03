@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> J Scipt Begins </title>
+
+    <link rel="shortcut icon" href="pics/spider1.png" />
+
+	<meta charset="utf-8" />
+
+    <script type="text/javascript">
+
+
+        function law() {
+            alert("No Way Out!!!")
+        }
+
+        function blaze() {
+            alert("dude...whatever!!!")
+        }
+
+
+
+        function funcTagName()
+        {
+            var x = document.getElementsByTagName("p");
+            document.getElementById("demo").innerHTML = "This is the second paragraph";
+        }
+
+
+        function newDay() {
+            document.getElementById("dayofWeek").innerHTML = "Today is " + today;
+        }
+
+        dayTimer();
+
+        var d = new Date();
+        var weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+
+        var today = weekday[d.getDay()];
+
+        var DateTime = new Date(day, hours, minutes);
+
+
+
+        function dayTimer() {
+
+            alert();
+        }
+
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+      <h1> My First Javascript Prog...again!!!! </h1>
+    <p> How Many Ways  </p>
+    <img src="pics/Lightening.jpg" height="200" width="400" />
+<br/>
+        <button
+            onclick="document.getElementById('demo').innerHTML=Date()">
+     Click Me to display date and time   </button>
+    <br />
+
+    <p>
+        <input type="button" onclick="newDay()" value="Day Button" />
+    </p>
+
+
+
+
+
+    <p id="demo">   </p>
+    <p id="demo2">   </p>
+    <p id="dayofWeek">   </p>
+    <button onclick="law()">  Watch Out!!   </button>
+
+    <button onclick="funcTagName()">  I Will Find YOU!!   </button>
+
+
+    <script>
+
+        document.write("Hello World");
+
+        var jar = 10;
+
+        document.write("Starting the loop");
+
+        for (var jar = 0; jar < length; jar++) {
+            document.write[j];
+        }
+        document.write("Loop completed...Already!!");
+    </script>
+
+</body>
+</html>
