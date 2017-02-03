@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>J Script Practice </title>
+
+<style media="screen">
+  #run {
+    background-color: green;
+    color:blue;
+  }
+</style>
+
+
+<script type="text/javascript">
+
+var text = "";
+var i;
+for (i = 0; i < 5; i++) {
+    text += "The number is " + i + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+
+
+
+</script>
+
+
+
+  </head>
+  <body>
+<h1>We r Family!!!</h1>
+
+<input type="button" value="Loop" id="run" onclick="now()"></button>
+
+<p id="demo"></p>
+<p id="message">  </p>
+
+
+
+<script >
+
+var text = "";
+var i;
+for (i = 0; i < 5; i++) {
+    text += "The number is " + i + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+
+var lasting;
+var words= "";
+for (lasting = 0; lasting < 10; lasting++) {
+//document.write(lasting);
+words += "here is your result " + lasting + "<br>";
+
+}
+
+  document.getElementById("message").innerHTML= words;
+
+//document.getElementById("demo").innerHTML = "allways" + text;
+</script>
+
+
+
+
+
+
+
+  </body>
+</html>
