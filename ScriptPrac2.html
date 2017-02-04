@@ -21,8 +21,10 @@ for (i = 0; i < 5; i++) {
 }
 document.getElementById("demo").innerHTML = text;
 
-
-
+function blah() {
+var words = document.getElementById("Pbox").value;
+document.getElementById("clever").innerHTML= "this is what you typed " + words;
+}
 </script>
 
 
@@ -31,7 +33,7 @@ document.getElementById("demo").innerHTML = text;
   <body>
 <h1>We r Family!!!</h1>
 
-<input type="button" value="Loop" id="run" onclick="now()"></button>
+<input type="button" value="Loop" id="run" onclick="blah()"></button>
 
 <p id="demo"></p>
 <p id="message">  </p>
@@ -60,11 +62,9 @@ words += "here is your result " + lasting + "<br>";
 //document.getElementById("demo").innerHTML = "allways" + text;
 </script>
 
+<input type="text" name="WordBox" value="truth" id="Pbox">
 
-
-
-
-
+<p id="clever"></p>
 
   </body>
 </html>

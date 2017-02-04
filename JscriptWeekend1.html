@@ -9,7 +9,6 @@
 
     <script type="text/javascript">
 
-
         function law() {
             alert("No Way Out!!!")
         }
@@ -18,20 +17,31 @@
             alert("dude...whatever!!!")
         }
 
-
-
         function funcTagName()
         {
             var x = document.getElementsByTagName("p");
-            document.getElementById("demo").innerHTML = "This is the second paragraph";
+            document.getElementById("smart").innerHTML = "This is the second paragraph";
         }
-
 
         function newDay() {
             document.getElementById("dayofWeek").innerHTML = "Today is " + today;
         }
 
-        dayTimer();
+        function addZero(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+
+        function exactTime() {
+      var k = new Date();
+      var x = document.getElementById("mine");
+      var h = addZero(k.getHours());
+      var m = addZero(k.getMinutes());
+      var s = addZero(k.getSeconds());
+      x.innerHTML = h + ":" + m + ":" + s;
+  }
 
         var d = new Date();
         var weekday = new Array(7);
@@ -47,19 +57,12 @@
 
         var DateTime = new Date(day, hours, minutes);
 
-
-
         function dayTimer() {
 
             alert();
         }
 
-
-
-
     </script>
-
-
 
 </head>
 <body>
@@ -76,17 +79,18 @@
         <input type="button" onclick="newDay()" value="Day Button" />
     </p>
 
-
-
-
+    <p>
+        <input type="button" onclick="exactTime()" value="Time Button" />
+    </p>
 
     <p id="demo">   </p>
+    <p id="smart">   </p>
     <p id="demo2">   </p>
     <p id="dayofWeek">   </p>
+    <p id="mine">   </p>
     <button onclick="law()">  Watch Out!!   </button>
 
     <button onclick="funcTagName()">  I Will Find YOU!!   </button>
-
 
     <script>
 
