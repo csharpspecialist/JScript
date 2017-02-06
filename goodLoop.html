@@ -1,0 +1,57 @@
+<doctype html>
+<html>
+
+<head>
+
+<title> Nested Loop Art</title>
+<script type="text/javascript">
+
+var base= '<div class="base"> </div>';
+
+var square= '<div class="square"> </div>';
+
+function build(levels) {
+
+for(var i= 0;i < levels; i++) {
+
+for (var k = 0; k <= i; k++)  {
+
+document.getElementById('canvas').innerHTML += base;
+}
+
+document.getElementById('canvas').innerHTML += square;
+
+}
+}
+
+
+</script>
+
+<style type="text/css">
+
+.base {
+
+width:120px;
+height:120px;
+background:#333;
+margin: 5px;
+float:left;
+color:#fff;
+}
+.square {
+clear:both;
+}
+
+ </style>
+</head>
+
+<body>
+
+<button onclick="build(5)"> Build Button </button>
+
+<div id="canvas">  </div>
+
+
+
+</body>
+</html>
