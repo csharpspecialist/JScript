@@ -55,12 +55,55 @@
 
         var today = weekday[d.getDay()];
 
-        var DateTime = new Date(day, hours, minutes);
+
+
+function right() {
+
+ document.getElementById("mine").innerHTML="Right now it is " + newdate;
+ }
+
+ var dateObj = new Date();
+ var month = dateObj.getUTCMonth() + 1; //months from 1-12
+ var day = dateObj.getUTCDate();
+ var year = dateObj.getUTCFullYear();
+
+ newdate1 = month + " - " + day  + " - " + year;
+
+ newdate2 = month + " / " + day  + " / " + year;
+
+ newdate3 = day + " / " + month + " / " + year;
+
+ function dayFirst() {
+
+  document.getElementById("mine").innerHTML="Month - Day - Year   " + newdate1;
+  }
+
+  function daySlash() {
+
+   document.getElementById("yours").innerHTML="Month / Day / Year   " + newdate2;
+   }
+
+   function monthSlash() {
+
+    document.getElementById("ours").innerHTML="Day / Month / Year   "  + newdate3;
+    }
 
         function dayTimer() {
 
             alert();
         }
+
+
+        function addCells() {
+            var table = document.getElementById("existingTable");
+            var row = table.insertRow(0);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            cell1.innerHTML = "added CELL1";
+            cell2.innerHTML = "added CELL2";
+        }
+        </script>
+
 
     </script>
 
@@ -76,11 +119,27 @@
     <br />
 
     <p>
-        <input type="button" onclick="newDay()" value="Day Button" />
+        <input type="button" onclick="dayFirst()" value="Day Format 1" />
     </p>
 
     <p>
-        <input type="button" onclick="exactTime()" value="Time Button" />
+        <input type="button" onclick="daySlash()" value="Day Format 2" />
+    </p>
+
+    <p>
+        <input type="button" onclick="monthSlash()" value="Day Format 3" />
+    </p>
+
+
+
+
+    <p>
+        <input type="button" onclick="newDay()" value="Day of Week Button" />
+    </p>
+
+
+    <p>
+        <input type="button" onclick="exactTime()" value="Current Time Button" />
     </p>
 
     <p id="demo">   </p>
@@ -88,23 +147,32 @@
     <p id="demo2">   </p>
     <p id="dayofWeek">   </p>
     <p id="mine">   </p>
+    <p id="yours">   </p>
+    <p id="ours">   </p>
     <button onclick="law()">  Watch Out!!   </button>
 
-    <button onclick="funcTagName()">  I Will Find YOU!!   </button>
+  <p>  <button onclick="funcTagName()">  I Will Find YOU!! </button> </p>
 
-    <script>
+  <p>    <button onclick="addCells()"> Press Me To Add Cells </button> </p>
 
-        document.write("Hello World");
 
-        var jar = 10;
+    <table id="existingTable">
+<tr>
+  <td>Row1 cell1</td>
+  <td>Row1 cell2</td>
+</tr>
+<tr>
+  <td>Row2 cell1</td>
+  <td>Row2 cell2</td>
+</tr>
+<tr>
+  <td>Row3 cell1</td>
+  <td>Row3 cell2</td>
+</tr>
+</table>
 
-        document.write("Starting the loop");
 
-        for (var jar = 0; jar < length; jar++) {
-            document.write[j];
-        }
-        document.write("Loop completed...Already!!");
-    </script>
+
 
 </body>
 </html>
